@@ -25,10 +25,11 @@ const findById = id => {
   return Promise.resolve(user)
 }
 
-const insert = ({ name, bio }) => {
+const insert = (name, bio ) => {
   // INSERT INTO users (name, bio) VALUES ('foo', 'bar');
   const newUser = { id: shortid.generate(), name, bio }
   users.push(newUser)
+  console.log(newUser);
   return Promise.resolve(newUser)
 }
 
